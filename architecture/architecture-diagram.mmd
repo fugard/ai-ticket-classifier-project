@@ -1,0 +1,8 @@
+flowchart LR
+    A[Customer / Support Portal] --> B[Amazon API Gateway]
+    B --> C[AWS Lambda\nTicket Processor]
+    C --> D[AI Classifier\nHeuristic or Bedrock]
+    C --> E[Amazon DynamoDB\nTicket Store]
+    C --> F[Amazon SNS\nNotifications]
+    C --> G[Amazon CloudWatch\nLogs & Metrics]
+    F --> H[Support Teams / Subscribers]
